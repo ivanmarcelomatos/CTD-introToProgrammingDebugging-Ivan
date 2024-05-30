@@ -34,6 +34,14 @@ function checkGuess() {
   } else {
     guess = parsedEntry;
   }
+
+  if (!isNaN(parsedEntry)) {
+    guess = parsedEntry;
+  } else {
+    alert('INVALID INPUT. Please enter an integer from 1 to 99');
+    guessInput.value = '';
+    return;
+  }
   
   attempts = attempts + 1;
 
